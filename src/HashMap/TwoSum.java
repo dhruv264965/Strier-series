@@ -24,8 +24,8 @@ public class TwoSum {
 
     public static void main(String[] args) {
        // int n = 5;
-        int[] nums = {2,152,4,7};
-        int target = 9;
+        int[] nums = {1,2,1,3,2};
+        int target = 4;
         int[] ans=twoSum(nums,target);
         System.out.println("["+ans[0]+""+ans[1]+"]");
 
