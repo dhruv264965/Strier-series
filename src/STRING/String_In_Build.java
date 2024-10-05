@@ -18,14 +18,14 @@ public class String_In_Build {
         System.out.println(Arrays.toString(str));
         System.out.println(Arrays.toString(str1));
 
-//        for (int i = 0; i < str1.length; i++) {
-//            System.out.println(str1[i]);
-//            if(str[i]=="dog")
-//            {
-//                count++;
-//            }
-//
-//        }
+        for (int i = 0; i < str1.length-1; i++) {
+        //    System.out.println(str1[i]);
+            if(str[i]=="dog")
+            {
+                count++;
+            }
+
+        }
         System.out.println(count);
     }
 
