@@ -11,7 +11,7 @@ public class MaxSubArrayOfSizeK {
         if (n < k) return -1;
         while (j < n) {
             sum += arr[j];
-            if (j - i + 1 < k) {
+            if (j - i + 1 < k) { ///yaha pe hum starting ke element check kar rhe hai jb tak size k ke equal nh ho hata
                 j++;
             } else if (j - i + 1 == k) {
                 max = Math.max(max, sum);
@@ -40,7 +40,7 @@ public class MaxSubArrayOfSizeK {
         int arr[]={4,7,3,1,1,9,9};
         int n=7;
         int k=3;
-      //  System.out.println(maxSubArrayOfSizeK(arr,n,k));
-        System.out.println(maxSubArrayOfSizeKBruteForce(arr,n,k));
+        System.out.println(maxSubArrayOfSizeK(arr,n,k));
+       // System.out.println(maxSubArrayOfSizeKBruteForce(arr,n,k));
     }
 }

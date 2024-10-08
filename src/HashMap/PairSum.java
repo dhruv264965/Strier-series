@@ -51,8 +51,8 @@ public class PairSum {
         int[] arr = {1, 5, 7, -1, 5, 3, 3, 3};
         int n = arr.length;
         int sum = 6;
-         printPairs(arr, n, sum);
-        //findPairsWithGivenSum(arr,sum);
+        printPairs(arr, n, sum);
+       // findPairsWithGivenSum(arr,sum);
     }
 }
 //output----   (1, 5)
