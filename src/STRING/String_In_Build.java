@@ -15,6 +15,8 @@ public class String_In_Build {
 
         String str[] = s.split(",");
         String str1[] = s1.split("cat");
+        int cont = str1.length-1;
+        System.out.println("count word"+cont);
         System.out.println(Arrays.toString(str));
         System.out.println(Arrays.toString(str1));
 

@@ -48,12 +48,55 @@ public class MaxDistinctSubArraySumOfSizeK {
         }
         return max;
     }
+    static int maxDistinctSubArraySumOOfSizeK(int arr[],int k,int n){
+        HashMap<Integer,Integer> hp=new HashMap<>();
+        int i=0,j=0;
+        int sum=0;
+        int max=0;
+        while (j<n){ //{1,3,1,4,2};
+
+            hp.put(arr[j],hp.getOrDefault(arr[j],0)+1);
+            sum+=arr[j];
+            if(j-i+1==k){
+                if(hp.size()==k) {
+                    max = Math.max(max, sum);
+                }
+                sum-=arr[i];
+                hp.put(arr[i],hp.get(arr[i])-1);
+
+                if(hp.get(arr[i])==0) {  ///here we are checking for last element have freq more than 1 then dont remove that element
+                    hp.remove(arr[i]); ///jab kisi kiffreq 0 ho jaye tousko remove kar do ..
+                }
+                i++;
+
+            }
+            j++;
+
+        }
+//        while (j < arr.length) {
+//            sum += arr[j];
+//            map.put(arr[j], map.getOrDefault(arr[j], 0) + 1);          // add it to map
+//                                                       // add to local sum
+//            if (j - i + 1 == k) {                                      // if window length == K
+//                if (map.size() == k) {                                 // if size of map is k, that means there are k unique elements
+//                    maxSum = Math.max(maxSum, sum);                    // take the max sum
+//                }
+//                sum -= arr[i];                                         // remove calculation of arr[i]
+//                map.put(arr[i], map.get(arr[i])-1);                    // remove arr[i] from map. If arr[i] is duplicate in window, decrease the freq by 1
+//                if (map.get(arr[i]) == 0) map.remove(arr[i]);
+//                i++;                                                   // shift the window to the right
+//            }
+//            j++;                                                       // expand the window
+//        }
+        return max;
+    }
 
     public static void main(String[] args) {
         int arr[]={1,3,1,4,2};
         int n=5;
         int k=3;
       //  System.out.println(maxDistinctSubArraySumOfSizeKBruteForece(arr,k,n));
-        System.out.println(maxDistinctSubArraySumOfSizeK(arr,k,n));
+        //System.out.println(maxDistinctSubArraySumOfSizeK(arr,k,n));
+        System.out.println(maxDistinctSubArraySumOOfSizeK(arr,k,n));
     }
 }
