@@ -4,6 +4,7 @@ class A{
         System.out.println("I am in static block");
     }
     A(){
+
         System.out.println("Constuctor A");
     }
     {
