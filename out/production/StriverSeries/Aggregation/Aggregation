@@ -1,0 +1,19 @@
+*Aggregation and composition describe the type of relationships between objects when communicating with each other, this might be used
+in low-level design to depict associations between objects. In this article, we are going to discuss the differences between Aggregation
+and Composition in Java programming language.
+
+
+*It represents Has-A’s relationship.
+*It is a unidirectional association i.e. a one-way relationship. For example, a department can have students but vice versa is not possible and thus unidirectional.
+*In Aggregation, both entries can survive individually which means ending one entity will not affect the other.
+
+*  In this example, there is an Institute that has a number of departments like CSE and EE.
+*  Every department has no. of students. So, we make an Institute class that has a reference to Object or no. of Objects (i.e. List of Objects) of the Department class.
+*  That means the Institute class is associated with the Department class through its Object(s).
+*  And Department class has also a reference to Objects or Objects (i.e. List of Objects) of the Student class means it is associated with the Student class through its Object(s).
+*  It represents a Has-A relationship. In the above example: Student Has-A name. Student Has-A ID. Student Has-A Dept.
+*  Department Has-A Students as depicted from the below media.
+
+*Aggregation is a specific form of association in which one class, the whole, contains a collection of other classes, the parts; here,
+however, the lifecycle of the parts does not depend upon the whole. For example, a library and books show aggregation, since books may
+exist somewhere apart from the library.

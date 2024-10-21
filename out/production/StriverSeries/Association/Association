@@ -1,0 +1,4 @@
+Association in Java defines the connection between two classes that are set up through their objects. Association manages one-to-one,
+one-to-many, and many-to-many relationships. In Java, the multiplicity between objects is defined by the Association. It shows how
+objects communicate with each other and how they use the functionality and services provided by that communicated object. Association
+manages one-to-one, one-to-many, many-to-one and many-to-many relationships.
