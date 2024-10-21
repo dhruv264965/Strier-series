@@ -65,7 +65,7 @@ public class MaxDistinctSubArraySumOfSizeK {
                 hp.put(arr[i],hp.get(arr[i])-1);
 
                 if(hp.get(arr[i])==0) {  ///here we are checking for last element have freq more than 1 then dont remove that element
-                    hp.remove(arr[i]); ///jab kisi kiffreq 0 ho jaye tousko remove kar do ..
+                    hp.remove(arr[i]); ///jab kisi ki ffreq 0 ho jaye to usko remove kar do ..
                 }
                 i++;
 

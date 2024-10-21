@@ -23,7 +23,7 @@ public class FirstNegativeOfEveryWindowSizeK {
                 j++;
             }
             else if((j - i + 1) == K) {
-                if(l.isEmpty()) {
+                if(l.isEmpty()) { ///list agar empty hai to
                     res[index++]=0;
                     //	list.add(0);
                 }
